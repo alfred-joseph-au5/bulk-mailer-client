@@ -3,6 +3,27 @@ import sideImg from '../img/BulkMailer.svg';
 import { Link } from 'react-router-dom';
 
 class SignupPage extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+        }
+
+        // this.onChange = this.onChange.bind(this);
+    }
+
+    onChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value //dynamically adds the object wrt name field
+        });
+    }
+
+    onSubmit = (e) => {
+        e.preventDefault();
+        console.log(this.state.email);
+        console.log(this.state.pwd);
+        
+    }
+    
     render() {
         return(
             <div className="signup-root">
@@ -10,21 +31,30 @@ class SignupPage extends Component {
                     <div className="signup-form-div">
                         <h4 className="signup-heading signup-form-labels">Create an account</h4>
                         <hr className="signup-hr"/>
-                        <form>
+                        <form onSubmit={this.onSubmit}>
                             <div className="d-flex justify-content-center flex-column">
                                 <div className="form-group">
                                     <label htmlFor="email" className="signup-form-labels">Email:</label>
-                                    <input type="email" className="form-control" id="email" placeholder="Enter email" name="email" />
+                                    <input 
+                                        type="email" 
+                                        className="form-control" 
+                                        id="email" 
+                                        placeholder="Enter email" 
+                                        name="email"
+                                        value={this.state.email || ''}
+                                        onChange={this.onChange} />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="pwd" className="signup-form-labels">Password:</label>
-                                    <input type="password" className="form-control" id="pwd" placeholder="Enter password" name="pswd" />
+                                    <input 
+                                    type="password" 
+                                    className="form-control" 
+                                    id="pwd" 
+                                    placeholder="Enter password" 
+                                    name="pwd"
+                                    value={this.state.pwd || ''}
+                                    onChange={this.onChange} />
                                 </div>
-                                {/* <div className="form-group form-check">
-                                    <label className="form-check-label">
-                                        <input className="form-check-input" type="checkbox" name="remember" /> Remember me
-                                    </label>
-                                </div> */}
                                 <div className="text-center"><button type="submit" className="btn btn-light w-25 mt-3">Create</button></div>
                                 <div className="text-center mt-3">
                                     <h6 className="text-white">Already have an account ? 
