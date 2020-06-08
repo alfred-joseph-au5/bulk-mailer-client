@@ -1,0 +1,19 @@
+.root {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+}
+
+.nav-bg {
+    /* background-color:rgb(35, 146, 243); */
+    /* background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%); */
+    /* background-image: linear-gradient(to right, #43e97b 0%, #0ba360 100%); */
+    background-image: linear-gradient(to top, rgb(13, 209, 85) 0%, #0fd881 100%);
+
+}
+
+.nav-headings {
+    color: white;
+    font-weight: 600;
+}

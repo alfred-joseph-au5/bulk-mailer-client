@@ -1,0 +1,47 @@
+.signup-root {
+    flex-grow: 1;
+    /* background-color: brown; */
+    display: flex;
+}
+
+.signup-div {
+    flex-grow: 1;
+    display: flex;
+}
+
+.signup-heading {
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 1.2;
+    padding-bottom: 1rem;
+}
+
+.signup-hr{
+    box-shadow: 0px 0px 20px rgb(88, 88, 88);
+
+}
+
+.signup-form-div {
+    width: 30vw;
+    /* background-color: #1AAA70; */
+    background-color: rgb(23, 216, 94);
+    /* padding: 6vw; */
+    padding: 3rem;
+    margin-top: 8vh;
+    margin-left: 7vh;
+    border-radius: 30px 30px 0px 0px;
+}
+
+.signup-form-labels {
+    padding-top: .5rem;
+    color: rgb(243, 243, 243);
+    font-weight: 555;
+}
+
+.signup-aside {
+    width: 65vw;
+    /* background-color: chartreuse; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
